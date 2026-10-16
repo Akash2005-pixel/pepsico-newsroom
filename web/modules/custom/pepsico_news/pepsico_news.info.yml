@@ -1,0 +1,9 @@
+name: PepsiCo News
+type: module
+description: 'News Article tooling for the PepsiCo Newsroom: sample content generation and shared news services.'
+package: PepsiCo
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:text
+  - drupal:datetime
