@@ -1,0 +1,35 @@
+uuid: 76e44b7e-9cb1-4ece-8b12-c4b19a51c4a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+  module:
+    - contextual
+    - file
+    - navigation
+    - node
+    - path
+    - system
+    - taxonomy
+_core:
+  default_config_hash: og55Zu0F-q-X8zG0Ohrls49zws6IrmmosZS-30Es8vw
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access navigation'
+  - 'administer url aliases'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete own files'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
