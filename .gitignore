@@ -18,7 +18,6 @@
 /web/INSTALL.txt
 /web/README.md
 /web/sites/default/files/
-/web/sites/default/settings.php
 /web/sites/default/settings.ddev.php
 /web/sites/default/default.*.yml
 /web/sites/default/default.settings.php
