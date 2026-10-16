@@ -1,0 +1,25 @@
+
+# Composer-managed code (reinstalled by `ddev composer install`)
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+/web/autoload.php
+/web/index.php
+/web/update.php
+/web/robots.txt
+/web/.htaccess
+/web/.csslintrc
+/web/.eslintrc.json
+/web/.ht.router.php
+/web/example.gitignore
+/web/INSTALL.txt
+/web/README.md
+/web/sites/default/files/
+/web/sites/default/settings.php
+/web/sites/default/settings.ddev.php
+/web/sites/default/default.*.yml
+/web/sites/default/default.settings.php
+.env
