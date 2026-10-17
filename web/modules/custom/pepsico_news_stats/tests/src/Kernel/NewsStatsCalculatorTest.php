@@ -14,12 +14,14 @@ use Drupal\pepsico_news\Service\NewsArticleGenerator;
 use Drupal\pepsico_news_stats\Service\NewsStatsCalculator;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Tests the News Article statistics calculator.
  */
 #[CoversClass(NewsStatsCalculator::class)]
 #[Group('pepsico_news_stats')]
+#[RunTestsInSeparateProcesses]
 final class NewsStatsCalculatorTest extends KernelTestBase {
 
   /**
