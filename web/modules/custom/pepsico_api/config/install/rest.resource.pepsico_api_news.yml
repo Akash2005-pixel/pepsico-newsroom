@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - pepsico_api
+    - serialization
+    - simple_oauth
+id: pepsico_api_news
+plugin_id: pepsico_api_news
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2
