@@ -32,6 +32,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  pepsico_core: 0
   pepsico_news: 0
   system: 0
   taxonomy: 0
