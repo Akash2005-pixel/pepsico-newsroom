@@ -8,4 +8,6 @@ global:
       css/layout.css: {}
     component:
       css/components.css: {}
+      css/forms.css: {}
+      css/filters.css: {}
       css/listing.css: {}
