@@ -1,0 +1,50 @@
+uuid: ff6606f6-6870-446c-a014-d72ab7341ce4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news_article.field_news_body
+    - field.field.node.news_article.field_news_featured
+    - field.field.node.news_article.field_news_publish_date
+    - field.field.node.news_article.field_news_summary
+    - node.type.news_article
+  module:
+    - datetime
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.news_article.teaser
+targetEntityType: node
+bundle: news_article
+mode: teaser
+content:
+  field_news_publish_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: olivero_medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_news_summary:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_news_body: true
+  field_news_featured: true
