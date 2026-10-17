@@ -10,6 +10,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\pepsico_feedback\FeedbackSubmissionAccessControlHandler;
+use Drupal\pepsico_feedback\FeedbackSubmissionListBuilder;
 use Drupal\views\EntityViewsData;
 
 /**
@@ -31,9 +32,13 @@ use Drupal\views\EntityViewsData;
   ],
   handlers: [
     'access' => FeedbackSubmissionAccessControlHandler::class,
+    'list_builder' => FeedbackSubmissionListBuilder::class,
     'views_data' => EntityViewsData::class,
   ],
-  admin_permission: 'administer pepsico feedback',
+  links: [
+    'collection' => '/admin/content/feedback',
+  ],
+  admin_permission: FeedbackSubmissionAccessControlHandler::PERMISSION_ADMINISTER,
   base_table: FeedbackSubmissionInterface::ENTITY_TYPE_ID,
   label_count: [
     'singular' => '@count feedback submission',

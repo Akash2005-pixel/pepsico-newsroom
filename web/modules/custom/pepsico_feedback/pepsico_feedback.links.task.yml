@@ -1,0 +1,5 @@
+entity.pepsico_feedback_submission.collection:
+  title: 'Feedback'
+  route_name: entity.pepsico_feedback_submission.collection
+  base_route: system.admin_content
+  weight: 20
