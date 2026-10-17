@@ -1,0 +1,18 @@
+uuid: cc348171-2c89-45f6-af1b-7de46c99b2ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'News Article'
+type: news_article
+description: 'Corporate news and press updates published in the PepsiCo Newsroom.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,10 @@
+services:
+  logger.channel.pepsico_news:
+    parent: logger.channel_base
+    arguments: ['pepsico_news']
+
+  Drupal\pepsico_news\Service\NewsArticleGenerator:
+    autowire: true
+
+  pepsico_news.article_generator:
+    alias: Drupal\pepsico_news\Service\NewsArticleGenerator
