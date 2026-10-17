@@ -42,12 +42,20 @@ Fictional-content newsroom demo. Never use real PepsiCo announcements, logos or 
 - Released v0.3.1 (full News Article page)
 - Task 2: `pepsico_news_stats` at `/admin/news-stats` (permission `view pepsico news stats`,
   published total and featured counts, cache tag `node_list:news_article`, link under Reports)
+- Task 3: `pepsico_feedback`, public form at `/feedback` storing `pepsico_feedback_submission`
+  entities; listing at `/admin/content/feedback` (permission
+  `view pepsico feedback submissions`, granted to content_editor); comments max length in
+  `pepsico_feedback.settings`; `FeedbackSubmittedEvent` + logging subscriber; kernel test.
+- Theme overrides `status-messages.html.twig` to add `messages--{type}` classes.
+
+## Testing
+- Kernel tests: `ddev exec 'SIMPLETEST_DB=mysql://db:db@db/db vendor/bin/phpunit -c web/core web/modules/custom/<module>'`
+- `ddev drush entity:updates` no longer exists in Drush 13; use `ddev drush updatedb:status`.
 
 ## Remaining work (priority order)
-1. Task 3: `pepsico_feedback`, form at `/feedback` (Name, Email, Comments), required and
-   email validation, success message, custom entity to store submissions.
-2. Task 6: `pepsico_api`, REST resource exposing news data, protected with OAuth2
+1. Task 6: `pepsico_api`, REST resource exposing news data, protected with OAuth2
    (Simple OAuth).
-3. Images (AI-generated, in `assets-source/`), image styles, hero background.
-4. Tests (PHPUnit), phpcs/phpstan clean, README, demo script.
-5. Stretch: event subscriber, Drupal AI (local provider only), Canvas.
+2. Images (AI-generated, in `assets-source/`), image styles, hero background.
+3. Tests (PHPUnit), phpcs/phpstan clean, README, demo script. Hard-coded colors remain
+   in `components.css`, `forms.css`, `article.css`; move them to tokens.
+4. Stretch: Drupal AI (local provider only), Canvas.
