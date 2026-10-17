@@ -6,6 +6,7 @@
   --pn-color-primary: #004b93;
   --pn-color-primary-dark: #00264d;
   --pn-color-accent: #e32934;
+  --pn-color-accent-dark: #b81f28;
   --pn-color-surface: #ffffff;
   --pn-color-surface-alt: #f4f6f9;
   --pn-color-text: #14213d;
@@ -13,6 +14,7 @@
   --pn-color-border: #dde3ec;
   --pn-color-on-dark: #ffffff;
   --pn-color-on-dark-muted: #cfd8e6;
+  --pn-color-on-dark-soft: #dbe6f5;
   --pn-color-focus-ring: rgba(0, 75, 147, 0.2);
 
   /* Feedback colors (status messages) */
