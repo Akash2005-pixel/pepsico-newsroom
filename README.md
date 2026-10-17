@@ -9,15 +9,30 @@ custom modules, a REST API secured with OAuth2, and a feedback system.
 - Custom modules: `pepsico_core`, `pepsico_news`, `pepsico_news_stats`,
   `pepsico_feedback`, `pepsico_api`
 
-## Local setup (new machine)
+## Fresh clone (new machine)
+Verified by a clean-clone test on 2026-10-17 (Drupal 11.4.10, DDEV v1.25.4).
+
 ```bash
 git clone git@github.com:Akash2005-pixel/pepsico-newsroom.git
 cd pepsico-newsroom
 ddev start
 ddev composer install
-ddev drush site:install --existing-config -y
+ddev drush site:install --existing-config -y   # imports config/sync
+ddev drush pepsico:generate-news               # 8 fictional sample articles
+mkdir -p keys
+ddev drush simple-oauth:generate-keys /var/www/html/keys
+ddev drush pepsico:api-client                  # copy the secret now
 ddev launch
 ```
+
+- `site:install` prints the admin password once. To log in later, run
+  `ddev drush uli`.
+- The keys and the client secret are created per environment and never
+  committed; see [News API (OAuth2)](#news-api-oauth2).
+- To run a second copy next to an existing one, give it its own DDEV project
+  name before `ddev start`, for example `name: pepsico-newsroom-clean` in
+  `.ddev/config.local.yaml`. DDEV's generated `.ddev/.gitignore` ignores that
+  file once DDEV has run in the folder.
 
 ## Workflow
 - `main`: stable, always demoable. `develop`: integration.
@@ -87,6 +102,8 @@ into a password manager straight away.
 - `ddev drush pepsico:api-client --rotate-secret` issues a new secret, revokes
   all existing tokens of the client and prints the new secret once. The old
   secret stops working immediately.
+- Lost the secret? It cannot be recovered; run
+  `ddev drush pepsico:api-client --rotate-secret` to issue a new one.
 
 Run the command in your own terminal, not through tools that keep a transcript.
 
@@ -156,17 +173,3 @@ ddev exec 'SIMPLETEST_BASE_URL=http://web SIMPLETEST_DB=sqlite://localhost//tmp/
 `SIMPLETEST_BASE_URL=http://web` is the web server as seen from inside the
 container. Deprecation notices in the output come from Simple OAuth and
 Consumers, not from the custom modules.
-
-### Fresh clone
-This sequence is a documented procedure that will be verified by a clean-clone
-test before release.
-
-```bash
-ddev start
-ddev composer install
-ddev drush site:install --existing-config -y   # imports config/sync
-ddev drush pepsico:generate-news               # sample articles
-mkdir -p keys
-ddev drush simple-oauth:generate-keys /var/www/html/keys
-ddev drush pepsico:api-client                  # copy the secret now
-```
