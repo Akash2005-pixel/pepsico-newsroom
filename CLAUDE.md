@@ -45,7 +45,7 @@ Fictional-content newsroom demo. Never use real PepsiCo announcements, logos or 
   published total and featured counts, cache tag `node_list:news_article`, link under Reports)
 - Task 3: `pepsico_feedback`, public form at `/feedback` storing `pepsico_feedback_submission`
   entities; listing at `/admin/content/feedback` (permission
-  `view pepsico feedback submissions`, granted to content_editor); comments max length in
+  `view pepsico feedback submissions`, administrators only); comments max length in
   `pepsico_feedback.settings`; `FeedbackSubmittedEvent` + logging subscriber; kernel test.
 - Theme overrides `status-messages.html.twig` to add `messages--{type}` classes.
 - Task 6: `pepsico_api`, `GET /api/news` (REST plugin `pepsico_api_news`, JSON only),
