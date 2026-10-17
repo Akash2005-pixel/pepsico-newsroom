@@ -1,16 +1,16 @@
-uuid: 3d88dd87-144f-4611-bf0d-10b51012c4e6
+uuid: f621efa0-d6a3-4e7d-a1aa-49d51ce2193f
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - text
 id: node.field_news_body
 field_name: field_news_body
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true
