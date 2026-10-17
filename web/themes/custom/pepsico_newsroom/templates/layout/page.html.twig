@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * PepsiCo Newsroom page layout.
+ *
+ * Regions: header, primary_menu, hero, highlighted, content, footer.
+ */
+#}
+<a class="pn-skip-link" href="#main-content">{{ 'Skip to main content'|t }}</a>
+
+<header class="pn-header" role="banner">
+  <div class="pn-container pn-header__inner">
+    <div class="pn-header__brand">{{ page.header }}</div>
+    <nav class="pn-header__nav" aria-label="{{ 'Primary'|t }}">
+      {{ page.primary_menu }}
+    </nav>
+  </div>
+</header>
+
+{% if page.hero %}
+  <section class="pn-hero" aria-label="{{ 'Featured'|t }}">
+    <div class="pn-container">{{ page.hero }}</div>
+  </section>
+{% endif %}
+
+<main id="main-content" class="pn-main pn-container" tabindex="-1">
+  {{ page.highlighted }}
+  {{ page.content }}
+</main>
+
+<footer class="pn-footer" role="contentinfo">
+  <div class="pn-container pn-footer__inner">
+    <p class="pn-footer__copy">
+      &copy; {{ 'now'|date('Y') }} {{ 'PepsiCo Newsroom. Demo project with fictional content.'|t }}
+    </p>
+    {{ page.footer }}
+  </div>
+</footer>
