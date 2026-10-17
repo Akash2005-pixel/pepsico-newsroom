@@ -10,6 +10,7 @@ dependencies:
     - navigation
     - node
     - path
+    - pepsico_feedback
     - system
     - taxonomy
 _core:
@@ -32,4 +33,5 @@ permissions:
   - 'revert all revisions'
   - 'view all revisions'
   - 'view own unpublished content'
+  - 'view pepsico feedback submissions'
   - 'view the administration theme'
