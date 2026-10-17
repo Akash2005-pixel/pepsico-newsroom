@@ -28,3 +28,6 @@
 *.key
 *.pem
 /.oauth-client*
+
+# PHPUnit / BrowserTestBase output
+/web/sites/simpletest/
