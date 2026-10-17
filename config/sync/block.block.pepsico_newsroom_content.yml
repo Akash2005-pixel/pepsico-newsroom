@@ -1,0 +1,22 @@
+uuid: ab43722a-54ac-4aac-bb58-2da663026ec2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pepsico_newsroom
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: pepsico_newsroom_content
+theme: pepsico_newsroom
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

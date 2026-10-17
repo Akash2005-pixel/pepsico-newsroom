@@ -1,0 +1,20 @@
+uuid: 70852d2c-83e6-4d97-82bd-36adb53abaff
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pepsico_newsroom
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: pepsico_newsroom_page_title
+theme: pepsico_newsroom
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 059f354b-8b7c-42d2-afee-c64614a73683
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pepsico_newsroom
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: pepsico_newsroom_primary_admin_actions
+theme: pepsico_newsroom
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

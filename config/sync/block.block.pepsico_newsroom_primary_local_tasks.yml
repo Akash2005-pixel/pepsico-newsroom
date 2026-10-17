@@ -1,0 +1,22 @@
+uuid: bccbf1f5-cfa4-4228-922d-e466db9dfd9f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pepsico_newsroom
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: pepsico_newsroom_primary_local_tasks
+theme: pepsico_newsroom
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
