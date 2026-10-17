@@ -10,6 +10,7 @@ dependencies:
     - node.type.news_article
   module:
     - datetime
+    - text
     - user
 id: node.news_article.default
 targetEntityType: node
@@ -17,8 +18,8 @@ bundle: news_article
 mode: default
 content:
   field_news_body:
-    type: basic_string
-    label: above
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 104

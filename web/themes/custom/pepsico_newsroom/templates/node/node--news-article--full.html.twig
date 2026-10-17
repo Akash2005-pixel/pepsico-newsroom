@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Full display for News Article nodes.
+ *
+ * The page title block renders the h1, so the title is not repeated here.
+ */
+#}
+{% set publish_date = node.field_news_publish_date.value %}
+<article{{ attributes.addClass('pn-article') }}>
+  <div class="pn-article__meta">
+    {% if node.field_news_featured.value %}
+      <span class="pn-article__badge">{{ 'Featured'|t }}</span>
+    {% endif %}
+    {% if publish_date %}
+      <time class="pn-article__date" datetime="{{ publish_date }}">{{ publish_date|date('j F Y') }}</time>
+    {% endif %}
+  </div>
+
+  {% if node.field_news_summary.value %}
+    <p class="pn-article__summary">{{ node.field_news_summary.value }}</p>
+  {% endif %}
+
+  <div class="pn-article__body">
+    {{ content.field_news_body }}
+  </div>
+
+  <p class="pn-article__back">
+    <a href="{{ path('view.news.page_1') }}">&larr; {{ 'Back to all news'|t }}</a>
+  </p>
+</article>

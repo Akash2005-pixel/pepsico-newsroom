@@ -11,3 +11,4 @@ global:
       css/forms.css: {}
       css/filters.css: {}
       css/listing.css: {}
+      css/article.css: {}
