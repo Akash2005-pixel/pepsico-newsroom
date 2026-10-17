@@ -1,0 +1,9 @@
+pepsico_news_stats.page:
+  path: '/admin/news-stats'
+  defaults:
+    _controller: '\Drupal\pepsico_news_stats\Controller\NewsStatsController::build'
+    _title: 'News statistics'
+  requirements:
+    _permission: 'view pepsico news stats'
+  options:
+    _admin_route: TRUE
