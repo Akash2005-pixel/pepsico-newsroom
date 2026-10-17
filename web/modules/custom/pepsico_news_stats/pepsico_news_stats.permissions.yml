@@ -1,0 +1,3 @@
+view pepsico news stats:
+  title: 'View news statistics'
+  description: 'Access the News Article statistics report at /admin/news-stats.'

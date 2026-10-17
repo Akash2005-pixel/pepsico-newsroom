@@ -1,0 +1,8 @@
+name: PepsiCo News Stats
+type: module
+description: 'Admin report with total and featured News Article counts for the PepsiCo Newsroom.'
+package: PepsiCo
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - pepsico:pepsico_news
