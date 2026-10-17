@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - rest.resource.pepsico_api_news
+  enforced:
+    module:
+      - pepsico_api
+  module:
+    - rest
+id: api_consumer
+label: 'API consumer'
+weight: 4
+is_admin: false
+permissions:
+  - 'restful get pepsico_api_news'

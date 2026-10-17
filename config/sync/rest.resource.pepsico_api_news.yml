@@ -1,0 +1,20 @@
+uuid: d9dd21e1-8252-4926-8433-c6ed9c71eb16
+langcode: en
+status: true
+dependencies:
+  module:
+    - pepsico_api
+    - serialization
+    - simple_oauth
+_core:
+  default_config_hash: GdelhZjrD7VeJAPvsfr9wGQ4a8K9_sGZQCC4QLaQz_g
+id: pepsico_api_news
+plugin_id: pepsico_api_news
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

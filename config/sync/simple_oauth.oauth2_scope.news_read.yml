@@ -1,0 +1,23 @@
+uuid: d562b2ea-bcb7-43a1-a283-1c71454476af
+langcode: en
+status: true
+dependencies:
+  enforced:
+    config:
+      - user.role.api_consumer
+    module:
+      - pepsico_api
+_core:
+  default_config_hash: 58nuoxjLzCW0afP0bzMiUh5FHRmy4vng-s6Jp0z7ID8
+id: news_read
+name: news_read
+description: 'Read published News Articles through /api/news.'
+grant_types:
+  client_credentials:
+    status: true
+    description: 'Machine-to-machine read access to published news.'
+umbrella: false
+parent: null
+granularity_id: role
+granularity_configuration:
+  role: api_consumer

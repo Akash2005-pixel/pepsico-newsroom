@@ -1,0 +1,19 @@
+uuid: 01cfe0ad-7774-4dc1-878e-1d5f3ca5e3fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - rest.resource.pepsico_api_news
+  module:
+    - rest
+  enforced:
+    module:
+      - pepsico_api
+_core:
+  default_config_hash: OKo6imJge97LGh1-zGFb3cZ9ibYYvFGcXc2Pbf7pz7k
+id: api_consumer
+label: 'API consumer'
+weight: 4
+is_admin: false
+permissions:
+  - 'restful get pepsico_api_news'
