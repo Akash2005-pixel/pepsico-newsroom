@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * News card component.
+ *
+ * Props: title, url, summary, date, date_iso, featured, image_url.
+ */
+#}
+<article class="pn-news-card{% if featured %} pn-news-card--featured{% endif %}">
+  <div class="pn-news-card__media">
+    {% if image_url %}
+      <img src="{{ image_url }}" alt="" loading="lazy">
+    {% endif %}
+    {% if featured %}
+      <span class="pn-news-card__badge">{{ 'Featured'|t }}</span>
+    {% endif %}
+  </div>
+  <div class="pn-news-card__body">
+    {% if date %}
+      <time class="pn-news-card__date" datetime="{{ date_iso }}">{{ date }}</time>
+    {% endif %}
+    <h2 class="pn-news-card__title">
+      <a class="pn-news-card__link" href="{{ url }}">{{ title }}</a>
+    </h2>
+    {% if summary %}
+      <p class="pn-news-card__summary">{{ summary }}</p>
+    {% endif %}
+    <span class="pn-news-card__cta" aria-hidden="true">{{ 'Read more'|t }} &rarr;</span>
+  </div>
+</article>

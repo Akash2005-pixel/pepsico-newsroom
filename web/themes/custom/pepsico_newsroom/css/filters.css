@@ -1,0 +1,33 @@
+/* /news exposed filters */
+.views-exposed-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--pn-space-3) var(--pn-space-4);
+  align-items: end;
+  padding: var(--pn-space-4);
+  background: var(--pn-color-surface-alt);
+  border: 1px solid var(--pn-color-border);
+  border-radius: var(--pn-radius);
+}
+
+.views-exposed-form .form-item,
+.views-exposed-form fieldset { margin: 0; }
+
+/* Date range: min and max side by side */
+.views-exposed-form fieldset .fieldset__wrapper,
+.views-exposed-form fieldset > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--pn-space-2);
+}
+
+.views-exposed-form .form-actions {
+  display: flex;
+  gap: var(--pn-space-2);
+  margin: 0;
+}
+
+/* Buttons take their own full-width row under the fields */
+.views-exposed-form .form-actions {
+  grid-column: 1 / -1;
+}

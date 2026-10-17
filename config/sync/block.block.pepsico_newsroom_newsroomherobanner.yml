@@ -1,0 +1,31 @@
+uuid: f9994f9b-b037-4dd5-be4c-6d2e61d47af7
+langcode: en
+status: true
+dependencies:
+  module:
+    - pepsico_core
+    - system
+  theme:
+    - pepsico_newsroom
+id: pepsico_newsroom_newsroomherobanner
+theme: pepsico_newsroom
+region: hero
+weight: 0
+provider: null
+plugin: pepsico_newsroom_hero
+settings:
+  id: pepsico_newsroom_hero
+  label: 'Newsroom hero banner'
+  label_display: '0'
+  provider: pepsico_core
+  headline: 'The PepsiCo Newsroom'
+  subheadline: 'Stories about our brands, people and planet, all in one place.'
+  cta_label: 'Browse latest news'
+  cta_url: /news
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /news
+      <front>

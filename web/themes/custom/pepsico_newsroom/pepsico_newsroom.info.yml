@@ -1,0 +1,17 @@
+name: PepsiCo Newsroom
+type: theme
+description: 'Custom enterprise theme for the PepsiCo Newsroom, built with Single Directory Components.'
+package: PepsiCo
+core_version_requirement: ^11
+base theme: false
+
+libraries:
+  - pepsico_newsroom/global
+
+regions:
+  header: Header
+  primary_menu: Primary menu
+  hero: Hero
+  highlighted: Highlighted
+  content: Content
+  footer: Footer

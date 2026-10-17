@@ -1,0 +1,13 @@
+global:
+  version: 1.0.0
+  css:
+    base:
+      css/tokens.css: {}
+      css/base.css: {}
+    layout:
+      css/layout.css: {}
+    component:
+      css/components.css: {}
+      css/forms.css: {}
+      css/filters.css: {}
+      css/listing.css: {}

@@ -1,0 +1,22 @@
+uuid: 575d51b2-0002-4163-9378-adb539bdfca4
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - pepsico_newsroom
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: pepsico_newsroom_powered
+theme: pepsico_newsroom
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 9154d600-52f6-468d-9cb1-762b9e7c1b08
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - pepsico_newsroom
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: pepsico_newsroom_help
+theme: pepsico_newsroom
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,35 @@
+/**
+ * Design tokens: single source of truth for brand values.
+ */
+:root {
+  /* Brand colors */
+  --pn-color-primary: #004b93;
+  --pn-color-primary-dark: #00264d;
+  --pn-color-accent: #e32934;
+  --pn-color-surface: #ffffff;
+  --pn-color-surface-alt: #f4f6f9;
+  --pn-color-text: #14213d;
+  --pn-color-text-muted: #5b6475;
+  --pn-color-border: #dde3ec;
+
+  /* Typography */
+  --pn-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --pn-font-size-base: 1rem;
+  --pn-line-height-base: 1.6;
+
+  /* Spacing scale */
+  --pn-space-1: 0.25rem;
+  --pn-space-2: 0.5rem;
+  --pn-space-3: 1rem;
+  --pn-space-4: 1.5rem;
+  --pn-space-5: 2.5rem;
+  --pn-space-6: 4rem;
+
+  /* Shape and elevation */
+  --pn-radius: 12px;
+  --pn-shadow-card: 0 2px 8px rgba(0, 38, 77, 0.08);
+  --pn-shadow-card-hover: 0 8px 24px rgba(0, 38, 77, 0.16);
+
+  /* Layout */
+  --pn-container: 1200px;
+}

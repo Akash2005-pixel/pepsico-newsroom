@@ -1,0 +1,84 @@
+/* Shared form controls (listing filters, feedback form, etc.) */
+.form-item { margin-bottom: var(--pn-space-3); }
+
+.form-item label,
+fieldset legend {
+  display: block;
+  margin-bottom: var(--pn-space-1);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--pn-color-primary-dark);
+}
+
+.form-text,
+.form-email,
+.form-date,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: var(--pn-space-2) var(--pn-space-3);
+  font: inherit;
+  color: var(--pn-color-text);
+  background: var(--pn-color-surface);
+  border: 1px solid var(--pn-color-border);
+  border-radius: 8px;
+}
+
+.form-text:focus,
+.form-email:focus,
+.form-date:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--pn-color-primary);
+  outline: 3px solid rgba(0, 75, 147, 0.2);
+}
+
+.form-submit {
+  padding: var(--pn-space-2) var(--pn-space-4);
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--pn-color-primary);
+  border: 2px solid var(--pn-color-primary);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.form-submit:hover,
+.form-submit:focus {
+  background: var(--pn-color-primary-dark);
+  border-color: var(--pn-color-primary-dark);
+}
+
+/* Secondary action, e.g. the Reset button */
+.form-submit[id*="reset"] {
+  color: var(--pn-color-primary);
+  background: transparent;
+}
+
+.form-submit[id*="reset"]:hover,
+.form-submit[id*="reset"]:focus {
+  color: #fff;
+  background: var(--pn-color-primary);
+}
+
+.form-item--error-message,
+.form-item__error-message {
+  color: var(--pn-color-accent);
+  font-size: 0.875rem;
+}
+
+.form-item .error,
+.form-text.error,
+.form-email.error,
+.form-textarea.error {
+  border-color: var(--pn-color-accent);
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0 0 var(--pn-space-3);
+  padding: 0;
+  border: 0;
+}

@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: News card
+status: stable
+group: News
+description: Card for a news article with date, title, summary and an optional featured badge.
+props:
+  type: object
+  required:
+    - title
+    - url
+  properties:
+    title:
+      type: string
+      title: Title
+    url:
+      type: string
+      title: Article URL
+    summary:
+      type: string
+      title: Summary
+    date:
+      type: string
+      title: Formatted publish date
+    date_iso:
+      type: string
+      title: Publish date in machine-readable form (Y-m-d)
+    featured:
+      type: boolean
+      title: Featured
+      default: false
+    image_url:
+      type: string
+      title: Optional image URL

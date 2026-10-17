@@ -1,0 +1,6 @@
+.pn-container {
+  width: 100%;
+  max-width: var(--pn-container);
+  margin-inline: auto;
+  padding-inline: var(--pn-space-3);
+}
