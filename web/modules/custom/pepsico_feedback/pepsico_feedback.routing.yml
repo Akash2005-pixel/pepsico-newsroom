@@ -1,0 +1,18 @@
+pepsico_feedback.form:
+  path: '/feedback'
+  defaults:
+    _form: '\Drupal\pepsico_feedback\Form\FeedbackForm'
+    _title: 'Feedback'
+  requirements:
+    # Public form: anonymous visitors may submit.
+    _access: 'TRUE'
+
+entity.pepsico_feedback_submission.collection:
+  path: '/admin/content/feedback'
+  defaults:
+    _entity_list: 'pepsico_feedback_submission'
+    _title: 'Feedback'
+  requirements:
+    _permission: 'view pepsico feedback submissions+administer pepsico feedback'
+  options:
+    _admin_route: TRUE

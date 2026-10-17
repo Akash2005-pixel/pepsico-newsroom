@@ -1,0 +1,10 @@
+pepsico_feedback.settings:
+  type: config_object
+  label: 'PepsiCo Feedback settings'
+  mapping:
+    comments_max_length:
+      type: integer
+      label: 'Maximum length of the Comments field, in characters'
+      constraints:
+        Range:
+          min: 1

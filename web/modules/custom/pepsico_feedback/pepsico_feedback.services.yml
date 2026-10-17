@@ -1,0 +1,9 @@
+services:
+  logger.channel.pepsico_feedback:
+    parent: logger.channel_base
+    arguments: ['pepsico_feedback']
+
+  Drupal\pepsico_feedback\EventSubscriber\FeedbackSubmittedSubscriber:
+    autowire: true
+    tags:
+      - { name: event_subscriber }

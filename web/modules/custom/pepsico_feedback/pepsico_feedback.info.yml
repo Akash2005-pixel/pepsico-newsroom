@@ -1,0 +1,7 @@
+name: PepsiCo Feedback
+type: module
+description: 'Public feedback form for the PepsiCo Newsroom, with stored submissions and an admin listing.'
+package: PepsiCo
+core_version_requirement: ^11
+dependencies:
+  - drupal:user

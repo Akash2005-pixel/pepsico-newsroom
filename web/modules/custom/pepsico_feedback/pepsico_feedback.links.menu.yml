@@ -1,0 +1,6 @@
+pepsico_feedback.form:
+  title: 'Feedback'
+  description: 'Send feedback about the newsroom.'
+  route_name: pepsico_feedback.form
+  menu_name: main
+  weight: 10

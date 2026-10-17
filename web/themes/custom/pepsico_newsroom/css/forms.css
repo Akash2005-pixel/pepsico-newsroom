@@ -1,6 +1,16 @@
 /* Shared form controls (listing filters, feedback form, etc.) */
 .form-item { margin-bottom: var(--pn-space-3); }
 
+/* Keep long-form inputs at a readable line length */
+.feedback-form { max-width: 40rem; }
+
+.form-item__description,
+.description {
+  margin-top: var(--pn-space-1);
+  font-size: 0.875rem;
+  color: var(--pn-color-text-muted);
+}
+
 .form-item label,
 fieldset legend {
   display: block;
