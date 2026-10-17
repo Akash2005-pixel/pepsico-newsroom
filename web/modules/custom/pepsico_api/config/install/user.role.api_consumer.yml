@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - pepsico_api
+id: api_consumer
+label: 'API consumer'
+weight: 4
+is_admin: false
+permissions: {  }

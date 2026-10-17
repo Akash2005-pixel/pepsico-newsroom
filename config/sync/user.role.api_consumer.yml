@@ -1,0 +1,14 @@
+uuid: b3681975-6dbc-4113-a06e-d3d55867f0c9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - pepsico_api
+_core:
+  default_config_hash: WyDzEEOOhdo9vvRrL8fABVpRZIZOXH5LPYqB6zjKU74
+id: api_consumer
+label: 'API consumer'
+weight: 4
+is_admin: false
+permissions: {  }

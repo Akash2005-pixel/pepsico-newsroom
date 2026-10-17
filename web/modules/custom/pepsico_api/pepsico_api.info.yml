@@ -1,0 +1,12 @@
+name: PepsiCo API
+type: module
+description: 'OAuth2-protected REST endpoint exposing published News Articles for the PepsiCo Newsroom.'
+package: PepsiCo
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:rest
+  - drupal:serialization
+  - drupal:user
+  - pepsico:pepsico_news
+  - simple_oauth:simple_oauth
