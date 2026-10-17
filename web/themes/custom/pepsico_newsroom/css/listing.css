@@ -1,15 +1,19 @@
-/* /news listing grid */
-.view-news .view-content {
+/* /news listing grid: the element that directly contains the rows becomes the grid */
+.pn-main :has(> .views-row) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--pn-space-4);
-  margin-top: var(--pn-space-4);
 }
 
-.view-news .views-row {
+/* Exposed form, pager, headers and empty text span the whole width */
+.pn-main :has(> .views-row) > :not(.views-row) {
+  grid-column: 1 / -1;
+}
+
+.pn-main .views-row {
   display: flex;
 }
 
-.view-news .views-row > * {
+.pn-main .views-row > * {
   flex: 1;
 }

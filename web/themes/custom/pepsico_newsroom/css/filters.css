@@ -26,3 +26,8 @@
   gap: var(--pn-space-2);
   margin: 0;
 }
+
+/* Buttons take their own full-width row under the fields */
+.views-exposed-form .form-actions {
+  grid-column: 1 / -1;
+}
