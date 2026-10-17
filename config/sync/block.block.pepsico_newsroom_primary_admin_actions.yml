@@ -8,8 +8,8 @@ _core:
   default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
 id: pepsico_newsroom_primary_admin_actions
 theme: pepsico_newsroom
-region: highlighted
-weight: -5
+region: content
+weight: 4
 provider: null
 plugin: local_actions_block
 settings:

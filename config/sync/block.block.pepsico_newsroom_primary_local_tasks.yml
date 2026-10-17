@@ -8,8 +8,8 @@ _core:
   default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
 id: pepsico_newsroom_primary_local_tasks
 theme: pepsico_newsroom
-region: highlighted
-weight: -4
+region: content
+weight: 2
 provider: null
 plugin: local_tasks_block
 settings:
