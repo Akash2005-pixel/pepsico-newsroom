@@ -22,3 +22,9 @@
 /web/sites/default/default.*.yml
 /web/sites/default/default.settings.php
 .env
+
+# OAuth2 keys and client secrets (per environment, never committed)
+/keys/
+*.key
+*.pem
+/.oauth-client*
