@@ -12,6 +12,8 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\pepsico_feedback\Entity\FeedbackSubmissionInterface;
+use Drupal\pepsico_feedback\Event\FeedbackSubmittedEvent;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 /**
  * Public feedback form at /feedback.
@@ -23,6 +25,7 @@ final class FeedbackForm extends FormBase {
   public function __construct(
     private readonly EntityTypeManagerInterface $entityTypeManager,
     private readonly EmailValidatorInterface $emailValidator,
+    private readonly EventDispatcherInterface $eventDispatcher,
     ConfigFactoryInterface $configFactory,
     MessengerInterface $messenger,
   ) {
@@ -145,14 +148,17 @@ final class FeedbackForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     $name = $form_state->getValue(FeedbackSubmissionInterface::FIELD_NAME);
 
-    $this->entityTypeManager
+    $submission = $this->entityTypeManager
       ->getStorage(FeedbackSubmissionInterface::ENTITY_TYPE_ID)
       ->create([
         FeedbackSubmissionInterface::FIELD_NAME => $name,
         FeedbackSubmissionInterface::FIELD_EMAIL => $form_state->getValue(FeedbackSubmissionInterface::FIELD_EMAIL),
         FeedbackSubmissionInterface::FIELD_COMMENTS => $form_state->getValue(FeedbackSubmissionInterface::FIELD_COMMENTS),
-      ])
-      ->save();
+      ]);
+    assert($submission instanceof FeedbackSubmissionInterface);
+    $submission->save();
+
+    $this->eventDispatcher->dispatch(new FeedbackSubmittedEvent($submission), FeedbackSubmittedEvent::NAME);
 
     $this->messenger()->addStatus($this->t('Thank you, @name. Your feedback has been received.', ['@name' => $name]));
     $form_state->setRedirect('pepsico_feedback.form');
