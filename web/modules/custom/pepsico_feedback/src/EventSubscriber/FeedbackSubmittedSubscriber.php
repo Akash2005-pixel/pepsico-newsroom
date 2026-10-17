@@ -12,8 +12,8 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 /**
  * Logs each new feedback submission.
  *
- * Only the submission id and name are logged: the email address and comments
- * stay in the entity so they are not copied into watchdog.
+ * Only the submission id is logged: the name, email address and comments are
+ * personal data, so they stay in the entity and are not copied into watchdog.
  */
 final class FeedbackSubmittedSubscriber implements EventSubscriberInterface {
 
@@ -33,9 +33,8 @@ final class FeedbackSubmittedSubscriber implements EventSubscriberInterface {
    * Writes a log entry for the submission.
    */
   public function onSubmitted(FeedbackSubmittedEvent $event): void {
-    $this->logger->info('Feedback #@id received from @name.', [
+    $this->logger->info('Feedback #@id received.', [
       '@id' => $event->submission->id(),
-      '@name' => $event->submission->getName(),
     ]);
   }
 
