@@ -9,6 +9,7 @@ module:
   breakpoint: 0
   ckeditor5: 0
   config: 0
+  consumers: 0
   contextual: 0
   datetime: 0
   dblog: 0
@@ -36,6 +37,9 @@ module:
   pepsico_feedback: 0
   pepsico_news: 0
   pepsico_news_stats: 0
+  rest: 0
+  serialization: 0
+  simple_oauth: 0
   system: 0
   taxonomy: 0
   text: 0
