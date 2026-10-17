@@ -1,0 +1,5 @@
+pepsico_news_stats.page:
+  title: 'News statistics'
+  description: 'Total and featured News Article counts.'
+  route_name: pepsico_news_stats.page
+  parent: system.admin_reports
