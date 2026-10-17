@@ -3,7 +3,7 @@
   position: absolute;
   left: -9999px;
   background: var(--pn-color-accent);
-  color: #fff;
+  color: var(--pn-color-on-dark);
   padding: var(--pn-space-2) var(--pn-space-3);
   z-index: 100;
 }
@@ -12,7 +12,7 @@
 /* Header */
 .pn-header {
   background: var(--pn-color-primary-dark);
-  color: #fff;
+  color: var(--pn-color-on-dark);
   border-bottom: 4px solid var(--pn-color-accent);
 }
 .pn-header__inner {
@@ -22,7 +22,7 @@
   gap: var(--pn-space-4);
   min-height: 72px;
 }
-.pn-header a { color: #fff; text-decoration: none; }
+.pn-header a { color: var(--pn-color-on-dark); text-decoration: none; }
 .pn-header .site-branding__name,
 .pn-header .site-branding__name a {
   font-size: 1.5rem;
@@ -47,7 +47,7 @@
 .pn-header__nav a:hover,
 .pn-header__nav a:focus,
 .pn-header__nav a.is-active {
-  color: #fff;
+  color: var(--pn-color-on-dark);
   border-bottom-color: var(--pn-color-accent);
 }
 
@@ -57,11 +57,11 @@
 /* Footer */
 .pn-footer {
   background: var(--pn-color-primary-dark);
-  color: #cfd8e6;
+  color: var(--pn-color-on-dark-muted);
   padding-block: var(--pn-space-4);
   margin-top: var(--pn-space-6);
 }
-.pn-footer a { color: #fff; }
+.pn-footer a { color: var(--pn-color-on-dark); }
 .pn-footer__copy { margin: 0; font-size: 0.875rem; }
 
 /* Status messages */

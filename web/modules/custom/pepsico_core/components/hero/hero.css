@@ -1,7 +1,7 @@
 .pn-hero {
   position: relative;
   overflow: hidden;
-  color: #fff;
+  color: var(--pn-color-on-dark);
   background: linear-gradient(120deg, var(--pn-color-primary-dark) 0%, var(--pn-color-primary) 100%);
 }
 
@@ -31,14 +31,14 @@
   max-width: 52ch;
   margin: 0 0 var(--pn-space-4);
   font-size: 1.25rem;
-  color: #dbe6f5;
+  color: var(--pn-color-on-dark-soft);
 }
 
 .pn-hero__cta {
   display: inline-block;
   padding: var(--pn-space-3) var(--pn-space-5);
   font-weight: 700;
-  color: #fff;
+  color: var(--pn-color-on-dark);
   text-decoration: none;
   background: var(--pn-color-accent);
   border-radius: 999px;
@@ -47,6 +47,6 @@
 
 .pn-hero__cta:hover,
 .pn-hero__cta:focus {
-  color: #fff;
-  background: #b81f28;
+  color: var(--pn-color-on-dark);
+  background: var(--pn-color-accent-dark);
 }
