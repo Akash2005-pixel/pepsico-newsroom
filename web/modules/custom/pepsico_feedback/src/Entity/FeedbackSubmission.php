@@ -9,6 +9,7 @@ use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\pepsico_feedback\FeedbackSubmissionAccessControlHandler;
 use Drupal\views\EntityViewsData;
 
 /**
@@ -29,6 +30,7 @@ use Drupal\views\EntityViewsData;
     'label' => FeedbackSubmissionInterface::FIELD_NAME,
   ],
   handlers: [
+    'access' => FeedbackSubmissionAccessControlHandler::class,
     'views_data' => EntityViewsData::class,
   ],
   admin_permission: 'administer pepsico feedback',

@@ -1,0 +1,8 @@
+view pepsico feedback submissions:
+  title: 'View feedback submissions'
+  description: 'Access the feedback listing at /admin/content/feedback. Submissions contain names and email addresses.'
+
+administer pepsico feedback:
+  title: 'Administer feedback submissions'
+  description: 'View and delete feedback submissions.'
+  restrict access: true
