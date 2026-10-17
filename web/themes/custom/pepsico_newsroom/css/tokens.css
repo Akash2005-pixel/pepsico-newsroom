@@ -11,6 +11,9 @@
   --pn-color-text: #14213d;
   --pn-color-text-muted: #5b6475;
   --pn-color-border: #dde3ec;
+  --pn-color-on-dark: #ffffff;
+  --pn-color-on-dark-muted: #cfd8e6;
+  --pn-color-focus-ring: rgba(0, 75, 147, 0.2);
 
   /* Feedback colors (status messages) */
   --pn-color-success: #1e7a46;
