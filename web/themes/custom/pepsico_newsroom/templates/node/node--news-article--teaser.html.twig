@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Teaser for News Article nodes. Maps entity fields to the news-card component.
+ */
+#}
+{% set publish_date = node.field_news_publish_date.value %}
+{% include 'pepsico_newsroom:news-card' with {
+  title: node.label,
+  url: url,
+  summary: node.field_news_summary.value,
+  date: publish_date ? publish_date|date('j F Y') : '',
+  date_iso: publish_date,
+  featured: node.field_news_featured.value ? true : false,
+} only %}

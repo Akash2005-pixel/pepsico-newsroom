@@ -8,3 +8,4 @@ global:
       css/layout.css: {}
     component:
       css/components.css: {}
+      css/listing.css: {}

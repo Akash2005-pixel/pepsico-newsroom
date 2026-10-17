@@ -1,0 +1,15 @@
+/* /news listing grid */
+.view-news .view-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--pn-space-4);
+  margin-top: var(--pn-space-4);
+}
+
+.view-news .views-row {
+  display: flex;
+}
+
+.view-news .views-row > * {
+  flex: 1;
+}
