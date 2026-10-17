@@ -1,0 +1,6 @@
+services:
+  Drupal\pepsico_api\Service\NewsApiProvider:
+    autowire: true
+
+  pepsico_api.news_provider:
+    alias: Drupal\pepsico_api\Service\NewsApiProvider
