@@ -1,0 +1,26 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--pn-font-sans);
+  font-size: var(--pn-font-size-base);
+  line-height: var(--pn-line-height-base);
+  color: var(--pn-color-text);
+  background: var(--pn-color-surface);
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 var(--pn-space-3);
+  line-height: 1.2;
+  color: var(--pn-color-primary-dark);
+}
+
+a { color: var(--pn-color-primary); }
+a:hover, a:focus { color: var(--pn-color-accent); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+:focus-visible {
+  outline: 3px solid var(--pn-color-accent);
+  outline-offset: 2px;
+}
