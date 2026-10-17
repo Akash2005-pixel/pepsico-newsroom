@@ -1,0 +1,7 @@
+name: PepsiCo Core
+type: module
+description: 'Shared building blocks for the PepsiCo Newsroom: blocks, components and common services.'
+package: PepsiCo
+core_version_requirement: ^11
+dependencies:
+  - drupal:block

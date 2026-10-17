@@ -1,0 +1,16 @@
+block.settings.pepsico_newsroom_hero:
+  type: block_settings
+  label: 'Newsroom hero block settings'
+  mapping:
+    headline:
+      type: label
+      label: 'Headline'
+    subheadline:
+      type: text
+      label: 'Subheadline'
+    cta_label:
+      type: label
+      label: 'Button label'
+    cta_url:
+      type: string
+      label: 'Button path'
