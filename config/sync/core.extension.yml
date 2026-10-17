@@ -34,6 +34,7 @@ module:
   path_alias: 0
   pepsico_core: 0
   pepsico_news: 0
+  pepsico_news_stats: 0
   system: 0
   taxonomy: 0
   text: 0

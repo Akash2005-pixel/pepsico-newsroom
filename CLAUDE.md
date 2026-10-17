@@ -39,15 +39,15 @@ Fictional-content newsroom demo. Never use real PepsiCo announcements, logos or 
 - Task 1 (content type, sample data, /news view with exposed filters and sorting)
 - Task 4 mostly done (custom theme, news-card component, hero block, full article page)
 - Front page is /news
+- Released v0.3.1 (full News Article page)
+- Task 2: `pepsico_news_stats` at `/admin/news-stats` (permission `view pepsico news stats`,
+  published total and featured counts, cache tag `node_list:news_article`, link under Reports)
 
 ## Remaining work (priority order)
-1. Merge `feature/news-article-page` into `develop`, tag.
-2. Task 2: `pepsico_news_stats`, route `/admin/news-stats`, controller + service,
-   permission, cache tags, shows total and featured counts.
-3. Task 3: `pepsico_feedback`, form at `/feedback` (Name, Email, Comments), required and
+1. Task 3: `pepsico_feedback`, form at `/feedback` (Name, Email, Comments), required and
    email validation, success message, custom entity to store submissions.
-4. Task 6: `pepsico_api`, REST resource exposing news data, protected with OAuth2
+2. Task 6: `pepsico_api`, REST resource exposing news data, protected with OAuth2
    (Simple OAuth).
-5. Images (AI-generated, in `assets-source/`), image styles, hero background.
-6. Tests (PHPUnit), phpcs/phpstan clean, README, demo script.
-7. Stretch: event subscriber, Drupal AI (local provider only), Canvas.
+3. Images (AI-generated, in `assets-source/`), image styles, hero background.
+4. Tests (PHPUnit), phpcs/phpstan clean, README, demo script.
+5. Stretch: event subscriber, Drupal AI (local provider only), Canvas.

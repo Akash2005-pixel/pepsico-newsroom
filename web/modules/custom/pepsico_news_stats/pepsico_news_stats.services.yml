@@ -1,0 +1,6 @@
+services:
+  Drupal\pepsico_news_stats\Service\NewsStatsCalculator:
+    autowire: true
+
+  pepsico_news_stats.calculator:
+    alias: Drupal\pepsico_news_stats\Service\NewsStatsCalculator
